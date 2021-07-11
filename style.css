@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+nav {
+  display: flex;
+  height: 80px;
+  width: 100%;
+  background: #48c290;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
+}
+nav .logo {
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+  font-weight: 450;
+}
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li {
+  margin: 0 5px;
+}
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+/* nav ul li a:hover{
+  color: #111;
+  background: #fff;
+} */
+
+nav .menu-btn i {
+  color: rgb(255, 255, 255);
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+input[type="checkbox"] {
+  display: none;
+}
+body {
+  font-weight: normal;
+}
+.header__section {
+  width: 85%;
+  margin: 0 auto;
+  display: flex;
+  padding : 0 10px;
+  justify-content: space-between;
+}
+
+.header__section .header__wrap:nth-child(1){
+  padding-top: 140px;
+  width:50%;
+
+}
+h1,h2,h3,h4,h5,h6{
+  font-weight: 450;
+
+}
+.header__section h1{
+  font-size: 2.7em;
+  line-height: 1.0;
+  margin-bottom: 10px;
+}
+.header__section p{
+  font-weight: 400;
+  color: rgb(196, 155, 155);
+}
+.header__section button{
+  padding:4px 12px;
+  margin: 12px 10px 12px 0px;
+  background : transparent;
+  border: 2px solid #48c290;
+  cursor :pointer;
+  font-size: 15px;
+  color : #48c290;
+  border-radius: 1px;
+
+
+}
+.header__section .header__wrap .btn__style{
+  background :  #48c290;
+  color : #fff;
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.1);
+
+}
+.header__section .header__wrap .btn__style:hover{
+  background :  #ffffff;
+  color : #48c290;
+  transition : 0.4s ease-in;
+
+}
+.wrap{
+  padding:50px;
+  background:rgba(158, 158, 158, 0.1);
+
+}
+.service{
+  width :95%;
+  /* padding: 0 10px; */
+  margin : 0 auto;
+  display:flex;
+  justify-content: space-between;
+
+}
+.service .service__child{
+  padding:20px;
+  box-shadow: 5px 5px 10px rgba(116, 115, 115, 0.1);
+  margin: 0 20px;
+  background : #fff;
+  text-align: center;
+  cursor : pointer;
+  width:33%;
+}
+.service .service__child:hover{
+  transform: scale(1.05);
+  transition : 0.4s ease-in;
+}
+.service .service__child img{
+  width: 65px;
+}
+.service .service__child h2{
+  margin: 12px 0px;
+}
+.service .service__child button{
+  padding : 3px 14px;
+  background : #48c290;
+  color : #fff;
+  border: none;
+  margin: 10px 0px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 1px;
+}
+.content p{
+  margin: 6px 0px;
+  width:100%;
+}
+.content{
+  padding : 0 40px;
+}
+@media (max-width: 1000px) {
+  nav {
+    padding: 0 40px 0 50px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 920px) {
+  nav{
+  padding: 0 20px;
+  }
+  nav .menu-btn i {
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before {
+    content: "\f00d";
+  }
+  nav ul {
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: #111;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  #click:checked ~ ul {
+    left: 0;
+  }
+  nav ul li {
+    width: 100%;
+    margin: 40px 0;
+  }
+  nav ul li a {
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    color: #fff;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #click:checked ~ ul li a {
+    margin-left: 0px;
+  }
+  .header__section {
+    width:100%;
+    padding : 0 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  .header__section .header__wrap:nth-child(2) img{
+    width:100%;
+  }
+  .header__section .header__wrap:nth-child(1){
+    padding-top: 35px;
+    width:100%;
+  
+  }
+  .header__section h1{
+    font-size: 2.0em;
+    margin-bottom: 8px;
+  }
+  .wrap{
+    padding:10px 0px;
+
+  
+  }
+  .service{
+    width :100%;
+
+    margin : 0px auto;
+    display:flex;
+    justify-content: space-between;
+    flex-direction: column;
+  
+  }
+  .service .service__child{
+    padding:25px 10px;
+    margin: 15px 20px;
+    width:auto;
+
+  }
+}
+
+/* Desktop */
+@media (min-width: 1500px) {
+  .header__section {
+    width: 70%;
+
+  }
+  .header__section .header__wrap:nth-child(1){
+    padding-top: 140px;
+    width:40%;
+  
+  }
+  nav{
+    width:100%;
+    padding: 0 15%;
+  }
+  .service{
+    width :75%;
+
+  
+  }
+}
